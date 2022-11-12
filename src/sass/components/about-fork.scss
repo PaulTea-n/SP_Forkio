@@ -1,0 +1,223 @@
+@import "../utils/mixin.scss";
+@import "../utils/variables.scss";
+// background: rgba(70, 48, 72, 0.9);
+
+.about-fork {
+  min-width: 320px;
+
+  background-color: rgb(70, 48, 72);
+  background-image: linear-gradient(
+      180deg,
+      rgba(238, 236, 238, 0.1),
+      rgba(120, 117, 120, 0.1),
+      rgb(70, 48, 72) 100%
+    ),
+    url(../images/bg-image/testmonials-bg-1.png);
+  background-position: top;
+
+  background-repeat: no-repeat;
+  background-size: 100% 66%;
+
+  @media (min-width: $bp-min-tablet) and (max-width: $bp-max-tablet) {
+    min-width: 768px;
+    background-size: cover;
+  }
+  @media (min-width: $bp-min-desc) {
+    width: 100%;
+  }
+
+  @media (min-width: $bp-min-desc) {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.about-fork__top-bg {
+  width: 100%;
+  height: 15px;
+  background: rgb(70, 48, 72);
+
+  @media (min-width: $bp-min-tablet) and (max-width: $bp-max-tablet) {
+    display: none;
+  }
+  @media (min-width: $bp-min-desc) {
+    display: none;
+  }
+}
+
+.about-fork__wrapper::after {
+  display: block;
+  content: "";
+  width: 245px;
+  height: 2px;
+  background: #645766;
+  margin: 22px auto 0;
+  @media (min-width: $bp-min-tablet) and (max-width: $bp-max-tablet) {
+    width: 555px;
+    margin: 19px auto 0;
+  }
+
+  @media (min-width: $bp-min-desc) {
+    width: 780px;
+    margin: 18px auto 0;
+  }
+}
+
+.about-fork__container {
+  min-width: 320px;
+  padding: 0 10px;
+  @media (min-width: $bp-min-tablet) and (max-width: $bp-max-tablet) {
+    min-width: 768px;
+    padding: 0 10px;
+  }
+
+  @media (min-width: $bp-min-desc) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.about-fork-heading {
+  padding: 52px 8px 0;
+  font-family: $ff-family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: $bp-min-tablet) and (max-width: $bp-max-tablet) {
+    padding-top: 85px;
+    font-size: 42px;
+    line-height: 44px;
+  }
+
+  @media (min-width: $bp-min-desc) {
+    padding-top: 108px;
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+.about-fork__list {
+  padding-top: 53px;
+  @include flex;
+  flex-direction: column;
+
+  @media (min-width: $bp-min-tablet) and (max-width: $bp-max-tablet) {
+    @include flex($justify: space-around, $align: baseline);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $bp-min-desc) {
+    padding-top: 82px;
+    @include flex($justify: space-around, $align: baseline);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.about-fork__item {
+  margin-bottom: 45px;
+  padding: 0 15px;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $bp-min-tablet) and (max-width: $bp-max-tablet) {
+    width: 340px;
+    margin-bottom: 40px;
+
+    &:not(:nth-child(-n + 4)) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $bp-min-desc) {
+    flex-basis: 330px;
+    margin-bottom: 111px;
+    padding: 0;
+    &:not(:nth-child(-n + 3)) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.about-fork__img {
+  &--smashing {
+    width: 165px;
+    height: 43px;
+    margin-bottom: 33px;
+  }
+
+  &--codrops {
+    width: 148px;
+    height: 50px;
+    margin-bottom: 29px;
+  }
+
+  &--w {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 22px;
+  }
+
+  &--pixel {
+    width: 225px;
+    height: 24px;
+    margin-bottom: 33px;
+  }
+
+  &--creative {
+    width: 166px;
+    height: 34px;
+    margin-bottom: 28px;
+  }
+
+  &--tnw {
+    width: 108px;
+    height: 34px;
+    margin-bottom: 24px;
+  }
+}
+
+.about-fork__text {
+  font-family: $ff-lato;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.about-fork__description-container {
+  @media (min-width: $bp-min-desc) {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}
+
+.about-fork__description {
+  margin-top: 37px;
+  padding: 0 20px;
+  font-family: $ff-lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: $color-fork-about-desc;
+
+  @media (min-width: $bp-min-tablet) and (max-width: $bp-max-tablet) {
+    margin-top: 68px;
+  }
+
+  @media (min-width: $bp-min-desc) {
+    margin-top: 108px;
+  }
+}

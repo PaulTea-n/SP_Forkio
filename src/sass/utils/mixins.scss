@@ -1,0 +1,11 @@
+@mixin font-monserrat {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin font-lato {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+}
